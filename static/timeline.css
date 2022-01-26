@@ -23,6 +23,12 @@
     line-height: 1.2;
     position: relative;
     border-radius: 50%;
+    border:2px #F2BB13 solid
+  }
+
+  .timeline li:hover {
+    background: #ff1100;
+    border:2px #F2BB13 solid
   }
 
   .timeline li:before {
