@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-vf2prfh#5)&ku+ku7t$*-du-=p56!n(u$%9*corz48o$u3ffm&
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "fast-caverns-29602.herokuapp.com"
+    "fast-caverns-29602.herokuapp.com",
+    "localhost",
+    "127.0.0.1"
 ]
 
 
