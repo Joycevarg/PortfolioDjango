@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="{% static 'timeline.css' %}">
   <style>
     .row {
-      height: 95%;
+      height: 100%;
     }
 
     .title-intro {
@@ -106,11 +106,9 @@
         </div>
         <div class="col-8" style="padding-right: 0rem;">
           <ul class="timeline" style="padding-left: 0px;padding-right: 60px; margin-right: 0px;">
-            <li data-year="Present"><div>Oracle</div></li>
-            <li data-year="'20"><div>B.Tech(Hons)</div></li>
-            <li data-year="'19"><div>Nissan Digital</div></li>
-            <li data-year="'18"><div>Clap Research</div></li>
-            <li data-year="'16"><div>AISSCE</div></li>
+            {% for milestone in milestones %}
+            <li data-year={{milestone.time}}><div>{{milestone.place}}</div></li>
+            {% endfor %}
           </ul>
         </div>
       </div>
@@ -121,14 +119,9 @@
           <h3>Technologies</h3>
           <div class="customUnderline mx-auto"></div>
           <div class="py-4">
-            <img src="{% static 'NodeJS.png' %}" class="mx-5 my-5 stack-card">
-            <img src="{% static 'Python.png' %}" class="mx-5 my-5 stack-card">
-            <img src="{% static 'Java.png' %}" class="mx-5 my-5 stack-card">
-            <img src="{% static 'C.png' %}" class="mx-5 my-5 stack-card">
-            <img src="{% static 'Android.png' %}" class="mx-5 my-5 stack-card">
-            <img src="{% static 'Unity.png' %}" class="mx-5 my-5 stack-card">
-            <img src="{% static 'Flutter.png' %}" class="mx-5 my-5 stack-card">
-            <img src="{% static 'Jenkins.png' %}" class="mx-5 my-5 stack-card">
+            {% for logo in stackLogos %}
+            <img src="{% static logo %}" class="mx-5 my-5 stack-card">
+            {%endfor%}
           </div>
         </div>
       </div>
@@ -247,30 +240,11 @@
         </div>
         <div class="container">
           <div class="row justify-content-md-center">
+          {% for profileLink in profileLinks %}
             <div class="handlelinks text-white mx-3" style="height: 50px;width: 57px; border-radius: 0.25rem;">
-              <a href="mailto:joycevarg@gmail.com"><i class="fas fa-at py-2 px-auto" style="font-size:36px;"></i></a>
+              <a href={{profileLink.link}}><i class="{{profileLink.icon}} py-2 px-auto" style="font-size:36px;"></i></a>
             </div>
-            <div class="handlelinks text-white mx-3" style="height: 50px;width: 57px; border-radius: 0.25rem;">
-              <a href="https://github.com/Joycevarg/" target="_blank"><i class="fab fa-github py-2 px-auto"
-                  style="font-size:36px;"></i></a>
-            </div>
-            <div class="handlelinks text-white mx-3" style="height: 50px;width: 57px; border-radius: 0.25rem;">
-              <a href="https://www.linkedin.com/in/joycevarg/" target="_blank"><i class="fab fa-linkedin py-2 px-auto"
-                  style="font-size:36px;"></i></a>
-            </div>
-            <div class="handlelinks text-white mx-3" style="height: 50px;width: 57px; border-radius: 0.25rem;">
-              <a href="https://www.instagram.com/joyce.varg/" target="_blank"><i class="fab fa-instagram py-2 px-auto"
-                  style="font-size:36px;"></i></a>
-            </div>
-            <div class="handlelinks text-white mx-3" style="height: 50px;width: 57px; border-radius: 0.25rem;">
-              <a href="https://medium.com/@joycevarg" target="_blank"><i class="fab fa-medium-m py-2 px-auto"
-                  style="font-size:36px;"></i></a>
-            </div>
-            <div class="handlelinks text-white mx-3" style="height: 50px;width: 57px; border-radius: 0.25rem;">
-              <a href="https://unsplash.com/@joycevarg" target="_blank"><i class="fab fa-unsplash py-2 px-auto"
-                  style="font-size:36px;"></i></a>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
