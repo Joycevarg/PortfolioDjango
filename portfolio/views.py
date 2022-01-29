@@ -25,7 +25,7 @@ def index(request):
         "ml":{"fg":"rgb(0,0,0)","bg":"rgb(100, 200, 239)"},
         "flutter":{"fg":"rgb(0,0,0)","bg":"rgb(100, 50, 239)"},
         "android":{"fg":"rgb(0,0,0)","bg":"rgb(0, 250, 50)"},
-        "java":{"fg":"rgb(0, 0, 0)","bg":"rgb(0, 239, 12)"},
+        "java":{"fg":"rgb(255,255,255)","bg":"rgb(0, 100, 12)"},
     }
     profileLinks=[
         {"icon":"fas fa-at","link":"mailto:joycevarg@gmail.com"},
