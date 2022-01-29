@@ -44,33 +44,33 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .timeline li:nth-child(odd):before {
-    top: -40px;
-  }
-
-  .timeline li:nth-child(even):before {
     bottom: -40px;
   }
-
   .timeline li div {
     display: none;
     content: attr(data-text);
     font-size: 16px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .timeline li:nth-child(odd) div {
-    bottom: 0;
-    margin-bottom: -10px;
-    transform: translate(-50%, 100%);
-  }
-
-  .timeline li:nth-child(even) div {
     top: 0;
     margin-top: -10px;
     transform: translate(-50%, -100%);
+  }
+
+  .experiencecontent{
+    height: 35%;
+    width: 40%;
+    border:3px solid  #00aeef;
+    border-radius: 0.5rem;
+    position: absolute;
+    transform: translate(12%, -120%);
+  }
+  
+  .experiencestack{
+    height: 35%;
+    width: 45%;
+    border:3px solid  #00aeef;
+    border-radius: 0.5rem;
+    position: absolute;
+    transform: translate(5%, 20%);
   }

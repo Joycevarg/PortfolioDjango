@@ -21,7 +21,7 @@ def index(request):
         {"icon":"fab fa-unsplash","link":"https://unsplash.com/@joycevarg"}
     ]
     milestones=[
-        {"time":"Present", "place":"Oracle"},
+        {"time":"Now", "place":"Oracle"},
         {"time":"'20", "place":"B.Tech(Hons)"},
         {"time":"'19", "place":"Nissan Digital"},
         {"time":"'18", "place":"Clap Research"},
