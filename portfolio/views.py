@@ -26,7 +26,7 @@ def index(request):
     ]
     milestones=[
         {"time":"Now", "place":"Oracle", "position":"Application Engineer",  "description":"<ul><li>Involved in the development of digital assistant for Oracle's latest generation ERP suite that is utilized by multiple Fortune 500 companies.</li><li>Responsible for development and deployment of the digital assistant for internal use at Oracle.</li><li>Developer point of contact for 10+ teams working on the product and responsible for the integration of their modules.</li><li>Responsible for design, development and maintenance of internal tools that are used by 15+ teams across the company for development, testing and analytics</li></ul>"},
-        {"time":"'20", "place":"College of Engineering Trivandrum", "position":"B.Tech(Hons)",  "description":"Lorem ipsum..."},
+        {"time":"'20", "place":"College of Engineering Trivandrum", "position":"B.Tech(Hons)",  "description":"Computer Science and Engineering"},
         {"time":"'19", "place":"Nissan Digital", "position":"Software Engineering Intern",  "description":"<ul><li>Worked on approximating the NP-hard packing problem of determining the usable trunk volume of a car.</li><li>Built a tool that allows engineers to easily test solutions for the problem.</li></ul>"},
         {"time":"'18", "place":"Clap Research", "position":"Machine Learning Intern", "description":"<ul><li>Worked on developing models that rank paragraphs for question answering.</li><li>Built workflows for developing and tuning the model.</li></ul>"},
     ]

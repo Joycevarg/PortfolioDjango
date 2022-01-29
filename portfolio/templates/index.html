@@ -159,7 +159,7 @@
               <p class="card-text">{{project.description}}</p>
               <div style="height: 38px;">
                 {% for projectlink in project.links %}
-                <a href="{{projectlink.link}}" class="card-link"><i
+                <a href="{{projectlink.link}}" target="_blank" class="card-link"><i
                     class="{{projectlink.icon}} py-1 px-auto" style="font-size:30px;"></i></a>
                 {% endfor %}
               </div>
