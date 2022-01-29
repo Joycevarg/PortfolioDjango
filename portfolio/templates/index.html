@@ -197,6 +197,7 @@
     })
     var milestones = {{ milestones| safe}};
     $('.timeline .timelinepoint').on('click', function () {
+      console.log($(this).index());
       $('#experiencecompany').html(milestones[$(this).index()].place);
       $("#experienceposition").html(milestones[$(this).index()].position);
       $("#experiencedescription").html(milestones[$(this).index()].description);
@@ -204,6 +205,7 @@
       $(this).addClass('active');
     });
     $(function () {
+      console.log("Executed");
       $('#experiencecompany').html(milestones[0].place);
       $("#experienceposition").html(milestones[0].position);
       $("#experiencedescription").html(milestones[0].description);
