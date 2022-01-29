@@ -14,7 +14,7 @@
     width: 100%;
   }
 
-  .timeline li {
+  .timeline .timelinepoint {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -23,16 +23,21 @@
     line-height: 1.2;
     position: relative;
     border-radius: 50%;
-    border:2px #F2BB13 solid
+    border:4px #F2BB13 solid
   }
 
-  .timeline li:hover {
-    background: #ff1100;
-    border:2px #F2BB13 solid
+  .timeline .timelinepoint:hover {
+    background: rgb(33, 37, 41);
+    border:4px #F2BB13 solid
   }
+  .timeline .timelinepoint.active {
+    background: rgb(33, 37, 41);
+    border:4px #F2BB13 solid
+  }
+
 
   
-  .timeline li:before {
+  .timeline .timelinepoint:before {
     display: inline-block;
     content: attr(data-year);
     font-size: 26px;
@@ -41,7 +46,7 @@
     transform: translateX(-50%);
     bottom: -40px;
   }
-  .timeline li div {
+  .timeline .timelinepoint div {
     content: attr(data-text);
     font-size: 16px;
     position: absolute;
