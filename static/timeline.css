@@ -32,11 +32,6 @@
   }
 
   
-  .timeline li:hover div{
-    display: inline-block;
-  }
-
-
   .timeline li:before {
     display: inline-block;
     content: attr(data-year);
@@ -47,7 +42,6 @@
     bottom: -40px;
   }
   .timeline li div {
-    display: none;
     content: attr(data-text);
     font-size: 16px;
     position: absolute;
@@ -55,15 +49,6 @@
     top: 0;
     margin-top: -10px;
     transform: translate(-50%, -100%);
-  }
-
-  #experiencecontent{
-    height: 35%;
-    width: 40%;
-    /* border:3px solid  #00aeef;
-    border-radius: 0.5rem; */
-    position: absolute;
-    transform: translate(12%, -120%);
   }
   
   #experiencestack{
