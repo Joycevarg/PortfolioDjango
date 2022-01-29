@@ -21,10 +21,10 @@ def index(request):
         {"icon":"fab fa-unsplash","link":"https://unsplash.com/@joycevarg"}
     ]
     milestones=[
-        {"time":"Now", "place":"Oracle"},
-        {"time":"'20", "place":"B.Tech(Hons)"},
-        {"time":"'19", "place":"Nissan Digital"},
-        {"time":"'18", "place":"Clap Research"},
+        {"time":"Now", "place":"Oracle", "position":"Application Engineer", "logo":"static/Android.png", "description":"Lorem ipsum...","stack":[]},
+        {"time":"'20", "place":"College of Engineering Trivandrum", "position":"B.Tech(Hons)", "logo":"static/C.png", "description":"Lorem ipsum...","stack":[]},
+        {"time":"'19", "place":"Nissan Digital", "position":"Software Engineering Intern", "logo":"static/Java.png", "description":"Lorem ipsum...","stack":[]},
+        {"time":"'18", "place":"Clap Research", "position":"Machine Learning Intern", "logo":"static/Flutter.png", "description":"Lorem ipsum...","stack":[]},
     ]
     data['stackLogos']=stackLogos
     data['profileLinks']=profileLinks

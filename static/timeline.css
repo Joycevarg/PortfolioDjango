@@ -60,8 +60,8 @@
   #experiencecontent{
     height: 35%;
     width: 40%;
-    border:3px solid  #00aeef;
-    border-radius: 0.5rem;
+    /* border:3px solid  #00aeef;
+    border-radius: 0.5rem; */
     position: absolute;
     transform: translate(12%, -120%);
   }
@@ -69,8 +69,8 @@
   #experiencestack{
     height: 35%;
     width: 45%;
-    border:3px solid  #00aeef;
-    border-radius: 0.5rem;
+    /* border:3px solid  #00aeef;
+    border-radius: 0.5rem; */
     position: absolute;
     transform: translate(5%, 20%);
   }

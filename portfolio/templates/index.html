@@ -106,11 +106,21 @@
         </div>
         <div class="col-8" style="padding-right: 0rem;">
           <ul class="timeline" style="padding-left: 0px;padding-right: 60px; margin-right: 0px;">
-            <div id="experiencecontent"></div>
             {% for milestone in milestones %}
-            <li data-year={{milestone.time}} onclick="changeExperienceContent('{{forloop.counter0}}')"></li>
+            <li data-year={{milestone.time}} onclick="changeExperienceContent('{{forloop.counter0}}')"><div>Hi</div></li>
             {% endfor %}
-            <div id="experiencestack"></div>
+            <div id="experiencestack" class="container">
+              <div class="row align-items-center">
+                <div class="col-4 px-2">
+                  <img id="experiencelogo" src="{% static 'logo.png' %}" class="img-thumbnail">
+                  <div id="experiencecompany" style="text-align: center;">Oracle</div>
+                  <div id="experienceposition" style="text-align: center;">Software Engineer</div>
+                </div>
+                <div class="col-8">
+                  <div id="experiencedescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a aliquid eum perspiciatis animi quos voluptas adipisci tenetur veritatis, architecto commodi reiciendis rem velit distinctio sit dolores labore inventore ipsam?isci tenetur veritatis, architecto commodi reiciendis rem velit distinctio sit dolores labore inventore ipsam?</div>
+                </div>
+              </div>
+            </div>
           </ul>
         </div>
       </div>
@@ -260,7 +270,10 @@
     })
     function changeExperienceContent(milestoneNo){
       var milestones = {{milestones|safe}};
-      document.getElementById("experiencecontent").innerHTML = milestones[milestoneNo].place;
+      document.getElementById("experiencecompany").innerHTML = milestones[milestoneNo].place;
+      document.getElementById("experienceposition").innerHTML = milestones[milestoneNo].position;
+      document.getElementById("experiencelogo").src = milestones[milestoneNo].logo;
+      document.getElementById("experiencedescription").innerHTML = milestones[milestoneNo].description;
     }
   </script>
 </body>
