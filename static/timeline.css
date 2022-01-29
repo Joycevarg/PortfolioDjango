@@ -57,7 +57,7 @@
     transform: translate(-50%, -100%);
   }
 
-  .experiencecontent{
+  #experiencecontent{
     height: 35%;
     width: 40%;
     border:3px solid  #00aeef;
@@ -66,7 +66,7 @@
     transform: translate(12%, -120%);
   }
   
-  .experiencestack{
+  #experiencestack{
     height: 35%;
     width: 45%;
     border:3px solid  #00aeef;
