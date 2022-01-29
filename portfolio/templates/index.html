@@ -108,7 +108,7 @@
           <ul class="timeline" style="padding-left: 0px;padding-right: 60px; margin-right: 0px;">
             <div id="experiencecontent"></div>
             {% for milestone in milestones %}
-            <li data-year={{milestone.time}} onclick="changeExperienceContent('{{milestone.place}}')"></li>
+            <li data-year={{milestone.time}} onclick="changeExperienceContent('{{forloop.counter0}}')"></li>
             {% endfor %}
             <div id="experiencestack"></div>
           </ul>
@@ -258,8 +258,9 @@
     var scrollSpy = new bootstrap.ScrollSpy(document.body, {
       target: '#navbar-example2'
     })
-    function changeExperienceContent(content){
-      document.getElementById("experiencecontent").innerHTML = content;
+    function changeExperienceContent(milestoneNo){
+      var milestones = {{milestones|safe}};
+      document.getElementById("experiencecontent").innerHTML = milestones[milestoneNo].place;
     }
   </script>
 </body>
