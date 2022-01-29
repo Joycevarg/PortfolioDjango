@@ -12,6 +12,10 @@ def index(request):
         "Flutter.png",
         "Jenkins.png"
     ]
+    tagcolors={
+        "nodejs":{"fg":"rgb(0, 0, 0)","bg":"rgb(0, 239, 12)"},
+        "python":{"fg":"rgb(255, 255, 255)","bg":"rgb(0, 12, 239)"}
+    }
     profileLinks=[
         {"icon":"fas fa-at","link":"mailto:joycevarg@gmail.com"},
         {"icon":"fab fa-github","link":"https://github.com/Joycevarg/"},
@@ -26,6 +30,26 @@ def index(request):
         {"time":"'19", "place":"Nissan Digital", "position":"Software Engineering Intern",  "description":"<ul><li>Worked on approximating the NP-hard packing problem of determining the usable trunk volume of a car.</li><li>Built a tool that allows engineers to easily test solutions for the problem.</li></ul>"},
         {"time":"'18", "place":"Clap Research", "position":"Machine Learning Intern", "description":"<ul><li>Worked on developing models that rank paragraphs for question answering.</li><li>Built workflows for developing and tuning the model.</li></ul>"},
     ]
+    projects=[
+        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"},{"icon":"fab fa-github","link":"http://helloworld"}]},
+        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
+        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum..."},
+        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
+        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
+        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
+        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
+        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
+    ]
+    for project in projects:
+        tagarr=[]
+        for tag in project["tags"]:
+            tagobj = {}
+            tagobj["text"] = tag
+            tagobj["fg"] = tagcolors[tag]["fg"]
+            tagobj["bg"] = tagcolors[tag]["bg"]
+            tagarr.append(tagobj)
+        project["tags"]=tagarr
+    data['projects']=projects
     data['stackLogos']=stackLogos
     data['profileLinks']=profileLinks
     data['milestones']=milestones
