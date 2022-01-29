@@ -14,7 +14,18 @@ def index(request):
     ]
     tagcolors={
         "nodejs":{"fg":"rgb(0, 0, 0)","bg":"rgb(0, 239, 12)"},
-        "python":{"fg":"rgb(255, 255, 255)","bg":"rgb(0, 12, 239)"}
+        "oci":{"fg":"rgb(0, 0, 0)","bg":"rgb(230, 0, 12)"},
+        "work":{"fg":"rgb(0, 0, 0)","bg":"rgb(12, 143, 242)"},
+        "jenkins":{"fg":"rgb(255, 255, 255)","bg":"rgb(12, 143, 242)"},
+        "python":{"fg":"rgb(255, 255, 255)","bg":"rgb(0, 12, 239)"},
+        "django":{"fg":"rgb(0,0,0)","bg":"rgb(0, 200, 239)"},
+        "ros":{"fg":"rgb(0,0,0)","bg":"rgb(100, 100, 239)"},
+        "school":{"fg":"rgb(0,0,0)","bg":"rgb(200, 100, 239)"},
+        "personal":{"fg":"rgb(255,255,255)","bg":"rgb(100, 100, 50)"},
+        "ml":{"fg":"rgb(0,0,0)","bg":"rgb(100, 200, 239)"},
+        "flutter":{"fg":"rgb(0,0,0)","bg":"rgb(100, 50, 239)"},
+        "android":{"fg":"rgb(0,0,0)","bg":"rgb(0, 250, 50)"},
+        "java":{"fg":"rgb(0, 0, 0)","bg":"rgb(0, 239, 12)"},
     }
     profileLinks=[
         {"icon":"fas fa-at","link":"mailto:joycevarg@gmail.com"},
@@ -31,14 +42,12 @@ def index(request):
         {"time":"'18", "place":"Clap Research", "position":"Machine Learning Intern", "description":"<ul><li>Worked on developing models that rank paragraphs for question answering.</li><li>Built workflows for developing and tuning the model.</li></ul>"},
     ]
     projects=[
-        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"},{"icon":"fab fa-github","link":"http://helloworld"}]},
-        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
-        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum..."},
-        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
-        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
-        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
-        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
-        {"name":"Hello World","tags":["python","nodejs"],"description":"Lorem ipsum...","links":[{"icon":"fas fa-at","link":"http://helloworld"}]},
+        {"name":"Digital Assistant for ERP","tags":["work","nodejs","oci","jenkins","django"],"description":"Chatbot interface for management of expenses in Oracle Fusion ERP.","links":[{"icon":"fas fa-info","link":"https://www.oracle.com/chatbots/digital-assistant-for-erp-scm/"}]},
+        {"name":"Custom object detector","tags":["personal","python","ml","ros"],"description":"Object detector module for ROS that can be easily trained on custom data for application specific scenarios.","links":[{"icon":"fab fa-github","link":"https://github.com/Joycevarg/ROS-tensorlite-object-detection"},{"icon":"fab fa-medium","link":"https://medium.com/swlh/creating-your-own-custom-object-detector-using-transfer-learning-f26918697889"}]},
+        {"name":"Deepfake video classifier","tags":["school","python","ml"],"description":"Video classifier that can identify deepfake videos."},
+        {"name":"QMailer","tags":["personal","java","android"],"description":"Android service that sends out a different coding question to study group everyday.","links":[{"icon":"fab fa-github","link":"https://github.com/Joycevarg/Qmailer"}]},
+        {"name":"Timer Game","tags":["personal","java","android"],"description":"Android game that tests reflexs.","links":[{"icon":"fab fa-github","link":"https://github.com/Joycevarg/TimerGame"}]},
+        {"name":"Applied CS By Android","tags":["school","java","android"],"description":"Applied CS Skills is a free online course by Google that teachs data structures while developing android games","links":[{"icon":"fab fa-github","link":"https://github.com/Joycevarg/AppliedCSwithAndroid"}]}
     ]
     for project in projects:
         tagarr=[]

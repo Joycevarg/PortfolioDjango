@@ -149,14 +149,14 @@
           <div class="card">
             <div class="card-body bg-dark">
               <h5 class="card-title">{{project.name}}</h5>
-              <div class="card-subtitle my-1 text-muted" style="height: 45px;">
+              <div class="card-subtitle my-1 text-muted" style="height: 25px;">
                 <h6>
                   {% for tag in project.tags %}
                   <span class="badge" style="background-color:{{tag.bg}};color:{{tag.fg}}">{{tag.text}}</span>
                   {% endfor %}
                 </h6>
               </div>
-              <p class="card-text">{{project.description}}</p>
+              <p class="card-text" style="height:100px">{{project.description}}</p>
               <div style="height: 38px;">
                 {% for projectlink in project.links %}
                 <a href="{{projectlink.link}}" target="_blank" class="card-link"><i
