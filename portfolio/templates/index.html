@@ -62,7 +62,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navBar" data-bs-offset="0" tabindex="0">
   <section id="intro">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-5 title-image">
           <img src="{% static 'logo.png' %}" width="320" height="200">
@@ -105,9 +105,9 @@
   </div>
 </div>
   </nav>
-  <div class="container">
+  <div class="container-fluid">
     <section id="experience">
-      <div class="row py-3 text-white bg-dark" style="height:500px">
+      <div class="row py-3 text-white bg-dark">
         <div class="col-4" style="padding-left: 3rem;padding-top: 7%;">
           <h2>Experience&</h2>
           <h1>Education</h1>
@@ -118,16 +118,16 @@
             {% for milestone in milestones %}
             <li class="timelinepoint" data-year={{milestone.time}} id="timelinepoint-{{forloop.counter0}}"></li>
             {% endfor %}
-            <div id="experiencestack" class="container">
-              <div class="row align-items-center">
-                <div class="col px-2">
-                  <h1 id="experiencecompany"></h1>
-                  <h3 id="experienceposition"></h3>
-                  <div id="experiencedescription"></div>
-                </div>
+          </ul>
+          <div id="experiencestack" class="container">
+            <div class="row align-items-center">
+              <div class="col px-2">
+                <h1 id="experiencecompany"></h1>
+                <h3 id="experienceposition"></h3>
+                <div id="experiencedescription"></div>
               </div>
             </div>
-          </ul>
+          </div>
         </div>
       </div>
     </section>
