@@ -75,9 +75,16 @@
       </div>
     </div>
   </section>
-  <nav id="navBar" class="navbar sticky-top bg-white" style="border-bottom: 2px solid rgb(33, 37, 41);">
-    <a class="navbar-brand mx-3 text-dark" href="#">joycevarg</a>
-    <ul class="nav nav-pills">
+  <nav id="navBar" class="navbar navbar-expand-lg sticky-top bg-white" style="border-bottom: 2px solid rgb(33, 37, 41);">
+    <div class="container-fluid">
+      <a class="navbar-brand mx-3 text-dark" href="#">joycevarg</a>
+      <div class="ms-auto">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-at"></i>
+      </button>
+    </div>
+      <div class="collapse navbar-collapse w-100" id="navbarTogglerDemo02">
+    <ul class="nav navbar-nav nav-pills mb-2 mb-lg-0 ms-auto">
       <li class="nav-item">
         <a class="nav-link" href="https://drive.google.com/file/d/1rveBCWETBFqbyNIQOTMW2gSzpAYXUbOk/view?usp=sharing"
           target="_blank">Resume</a>
@@ -95,10 +102,12 @@
         <a class="nav-link" href="#contact">Contact</a>
       </li>
     </ul>
+  </div>
+</div>
   </nav>
   <div class="container">
     <section id="experience">
-      <div class="row py-3 text-white bg-dark">
+      <div class="row py-3 text-white bg-dark" style="height:400px">
         <div class="col-4" style="padding-left: 3rem;padding-top: 7%;">
           <h2>Experience&</h2>
           <h1>Education</h1>
@@ -190,7 +199,7 @@
     crossorigin="anonymous"></script>
   <script>
     var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-      target: '#navbar-example2'
+      target: '#navBar'
     })
     var milestones = {{ milestones| safe}};
     $('.timeline .timelinepoint').on('click', function () {
