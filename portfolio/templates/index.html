@@ -74,13 +74,18 @@
       font-size:large;
     }
 
+    .milestone-object:nth-child(odd){
+      background-color: #7BB2D9;
+      color: rgb(33, 37, 41);
+      font-size:medium;
+    }
+
     @media only screen and (max-width: 600px) {
     #introtext {
     text-align: center;
     }
     .title-intro{
       padding-top: 0px;
-
     }
   }
   </style>
@@ -165,14 +170,16 @@
           </div>
         </div>
       </div>
-      <div class="row py-3 text-white bg-dark d-block d-xl-none">
-        <div class="col">
-          <h2 style="text-align: center;">Experience & Education</h2>
-          <div class="customUnderline mx-auto"></div>
-        </div>
-        <div class="col">
-          <h2 style="text-align: center;">Experience & Education</h2>
-          <div class="customUnderline mx-auto"></div>
+      <div class="row pb-3 text-white bg-dark d-block d-xl-none">
+        <div class="col" style="padding-right: 0;padding-left: 0;">
+          <h2 style="text-align: center;padding-top: 1.5rem;">Experience & Education</h2>
+          <div class="customUnderline mx-auto" style="margin-bottom: 1.5rem;"></div>
+          {% for milestone in milestones %}
+          <div class="milestone-object px-2 py-2">
+            <div class="milestone-position">{{ milestone.position }}<span style="float: right;">[{{ milestone.period }}]</span></div>
+            <div class="milestone-place">{{ milestone.place }}</div>
+          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
