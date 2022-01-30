@@ -65,10 +65,10 @@
   <section id="intro">
     <div class="container-fluid">
       <div class="row align-items-center" style="min-height:600px">
-        <div class="col-5 title-image">
+        <div class="col-sm-5 title-image">
           <img src="{% static 'logo.png' %}" width="320" height="200">
         </div>
-        <div class="lead col-7 title-intro">
+        <div class="lead col-sm-7 title-intro">
           <b>👋Hi, I am </b>
           <h2>Joyce Varghese</h2>
           I am an awesome engineer who enjoys building quirky projects.
@@ -83,7 +83,7 @@
       <div class="ms-auto">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-at"></i>
+          <i class="fas fa-bars"></i>
         </button>
       </div>
       <div class="collapse navbar-collapse w-100" id="navbarTogglerDemo02">
@@ -150,14 +150,16 @@
     </section>
     <section id="projects">
       <div class="row bg-dark text-white">
-        <div style="padding: 4rem;">
+        <div class="d-none d-sm-block" style="padding: 4rem;">
           <h2 style="color: white;">Projects</h2>
           <div class="customUnderline"></div>
         </div>
-      </div>
-      <div class="row bg-dark text-white px-3">
+        <div class="mobile-heading d-block d-sm-none" style="padding: 4rem;">
+          <h2 style="color: white;text-align: center;">Projects</h2>
+          <div class="customUnderline mx-auto"></div>
+        </div>
         {% for project in projects %}
-        <div class="col-3 mb-3">
+        <div class="col-sm-3 mb-3">
           <div class="card">
             <div class="card-body bg-dark">
               <h5 class="card-title">{{project.name}}</h5>
@@ -190,13 +192,18 @@
           <div class="customUnderline mx-auto"></div>
         </div>
         <div class="container mb-5">
-          <div class="row justify-content-md-center">
+          <div class="row justify-content-center">
+            <div class="col-md-3"></div>
             {% for profileLink in profileLinks %}
-            <div class="handlelinks text-white mx-3" style="height: 50px;width: 57px; border-radius: 0.25rem;">
-              <a href={{profileLink.link}} target="_blank"><i class="{{profileLink.icon}} py-2 px-auto"
-                  style="font-size:36px;"></i></a>
+            <div class="col-6 col-md-1 mx-auto">
+              <div class="handlelinks text-white mx-auto my-3"
+                style="max-width: 57px; border-radius: 0.25rem;text-align: center;">
+                <a href={{profileLink.link}} target="_blank"><i class="{{profileLink.icon}} py-2 px-auto"
+                    style="font-size:36px;"></i></a>
+              </div>
             </div>
             {% endfor %}
+            <div class="col-md-3"></div>
           </div>
         </div>
     </section>
