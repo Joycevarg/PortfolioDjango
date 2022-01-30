@@ -111,14 +111,14 @@
   </nav>
   <div class="container-fluid">
     <section id="experience">
-      <div class="row py-3 text-white bg-dark">
+      <div class="row py-3 text-white bg-dark d-none d-xl-flex">
         <div class="col-4" style="padding-left: 3rem;padding-top: 7%;">
           <h2>Experience&</h2>
           <h1>Education</h1>
           <div class="customUnderline"></div>
         </div>
         <div class="col-8" style="padding-right: 0rem;">
-          <ul class="timeline d-none d-lg-block" style="padding-left: 0px;padding-right: 60px; margin-right: 0px;">
+          <ul class="timeline" style="padding-left: 0px;padding-right: 60px; margin-right: 0px;">
             {% for milestone in milestones %}
             <li class="timelinepoint" data-year={{milestone.time}} id="timelinepoint-{{forloop.counter0}}"></li>
             {% endfor %}
@@ -132,6 +132,16 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row py-3 text-white bg-dark d-block d-xl-none">
+        <div class="col">
+          <h2 style="text-align: center;">Experience & Education</h2>
+          <div class="customUnderline mx-auto"></div>
+        </div>
+        <div class="col">
+          <h2 style="text-align: center;">Experience & Education</h2>
+          <div class="customUnderline mx-auto"></div>
         </div>
       </div>
     </section>
