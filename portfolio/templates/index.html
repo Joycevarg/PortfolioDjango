@@ -1,4 +1,5 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
   {% load static %}
@@ -8,10 +9,6 @@
   <script src="https://kit.fontawesome.com/0538716759.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'timeline.css' %}">
   <style>
-    .row {
-      height: 100%;
-    }
-
     .title-intro {
       padding-top: 150px;
     }
@@ -78,7 +75,7 @@
       </div>
     </div>
   </section>
-  <nav id="navBar" class="navbar sticky-top bg-white" style="width: 100%;border-bottom: 2px solid rgb(33, 37, 41);">
+  <nav id="navBar" class="navbar sticky-top bg-white" style="border-bottom: 2px solid rgb(33, 37, 41);">
     <a class="navbar-brand mx-3 text-dark" href="#">joycevarg</a>
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -101,14 +98,14 @@
   </nav>
   <div class="container">
     <section id="experience">
-      <div class="row py-3 text-white bg-dark" style="height: 80%;">
+      <div class="row py-3 text-white bg-dark">
         <div class="col-4" style="padding-left: 3rem;padding-top: 7%;">
           <h2>Experience&</h2>
           <h1>Education</h1>
           <div class="customUnderline"></div>
         </div>
         <div class="col-8" style="padding-right: 0rem;">
-          <ul class="timeline" style="padding-left: 0px;padding-right: 60px; margin-right: 0px;">
+          <ul class="timeline d-none d-lg-block" style="padding-left: 0px;padding-right: 60px; margin-right: 0px;">
             {% for milestone in milestones %}
             <li class="timelinepoint" data-year={{milestone.time}} id="timelinepoint-{{forloop.counter0}}"></li>
             {% endfor %}
@@ -170,7 +167,7 @@
       </div>
     </section>
     <section id="contact">
-      <div class="row" style="height:30%">
+      <div class="row">
         <div class="col-12 my-5">
           <div style="text-align: center;">
             <h2>Hit me up</h2>
