@@ -10,11 +10,11 @@
   <link rel="stylesheet" href="{% static 'timeline.css' %}">
   <style>
     .title-intro {
-      padding-top: 150px;
+      padding-top: 115px;
     }
 
     .title-image {
-      padding-top: 120px;
+      padding-top: 100px;
     }
 
     .nav-item {
@@ -73,23 +73,32 @@
     #experiencedescription{
       font-size:large;
     }
+
+    @media only screen and (max-width: 600px) {
+    #introtext {
+    text-align: center;
+    }
+    .title-intro{
+      padding-top: 0px;
+
+    }
+  }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
     Joyce Varghese
   </title>
-  <!-- add icon link -->
   <link rel="icon" href="{% static 'navicon.jpeg' %}" type="image/x-icon">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navBar" data-bs-offset="0" tabindex="0">
   <section id="intro">
     <div class="container-fluid">
-      <div class="row align-items-center" style="min-height:600px">
-        <div class="col-sm-5 title-image">
+      <div class="row align-items-center" style="min-height:700px;">
+        <div class="col-sm-5 title-image" style="text-align: center;">
           <img src="{% static 'logo.png' %}" width="320" height="200">
         </div>
-        <div class="lead col-sm-7 title-intro">
+        <div class="lead col-sm-7 title-intro" id="introtext">
           <b>👋Hi, I am </b>
           <h2>Joyce Varghese</h2>
           I am an awesome engineer who enjoys building quirky projects.
