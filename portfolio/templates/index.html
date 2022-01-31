@@ -9,6 +9,17 @@
   <script src="https://kit.fontawesome.com/0538716759.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{% static 'timeline.css' %}">
   <style>
+
+    .noselect {
+      -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+          -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                      supported by Chrome, Edge, Opera and Firefox */
+    }
+
     .title-intro {
       padding-top: 115px;
     }
@@ -96,7 +107,7 @@
   <link rel="icon" href="{% static 'navicon.jpeg' %}" type="image/x-icon">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navBar" data-bs-offset="0" tabindex="0">
+<body class="noselect" data-bs-spy="scroll" data-bs-target="#navBar" data-bs-offset="0" tabindex="0">
   <section id="intro">
     <div class="container-fluid">
       <div class="row align-items-center" style="min-height:700px;">
